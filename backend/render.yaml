@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: nft-marketplace-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_URL
+        sync: false # This will be set manually in Render dashboard
+      - key: PORT
+        value: 3000
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
